@@ -1,19 +1,8 @@
-const handler = require("serve-handler");
-const http = require("http");
-const server = http.createServer((request, response) => {
-  return handler(request, response, { public: "client" });
-});
-const io = require("socket.io")(server);
+//待處理：引入模組
 
-server.listen(3000, function () {
-  console.log("listening on *:3000");
+//待處理：建立 HTTP 伺服器
+//待處理：建立 Socket.IO 伺服器
 
-  io.on("connection", function (socket) {
-    console.log("a client connected: " + socket.id);
+//待處理：啟動伺服器並監聽 3000 port
 
-    socket.on("directive", function (message) {
-      console.log(message); //1.
-      socket.broadcast.emit("screen", message); //2.
-    });
-  });
-});
+//處理 WebSocket 連接事件

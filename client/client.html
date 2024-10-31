@@ -7,17 +7,13 @@
     <script src="/socket.io/socket.io.js"></script>
 
     <script>
-      const socket = io();
+      //待處理 1. 使用 socket.io 建立 Websocket 連線
+
       function onBtnClicked() {
         let value = document.getElementById("color").value;
         console.log(value);
-        //待會下面還要加入更多程式..
-        socket.emit("directive", {
-          x: (Math.random() * 1000) % 400,
-          y: (Math.random() * 1000) % 400,
-          r: (Math.random() * 1000) % 100,
-          c: value,
-        });
+
+        //待處理 2. 發送資料給 Server
       }
     </script>
   </head>
